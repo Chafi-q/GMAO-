@@ -1,0 +1,411 @@
+{
+  "success": true,
+  "taches": [
+    {
+      "id": "11",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "2",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-29T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "3",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-21T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "4",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "5",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": "6",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "7",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-30T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "8",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-24T23:00:00.000Z",
+      "dateFin": "2024-05-23T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "9",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "10",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "11",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "12",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-30T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": "13",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "14",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-17T23:00:00.000Z",
+      "dateFin": "2024-05-21T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "15",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-15T23:00:00.000Z",
+      "dateFin": "2024-05-20T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "16",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "17",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "18",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": "19",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-23T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "20",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-23T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "21",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-16T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "22",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "23",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": "24",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-29T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": "25",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-21T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": 26,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": 27,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 28,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 29,
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 30,
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-30T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 31,
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-15T23:00:00.000Z",
+      "dateFin": "2024-05-23T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 32,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-23T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "John Doe",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 33,
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-29T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 34,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-20T23:00:00.000Z",
+      "dateFin": "2024-05-22T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": 35,
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Préventif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": 36,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-29T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Compresseur A1"
+    },
+    {
+      "id": 37,
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-21T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "Jane Smith",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    }
+  ],
+  "maintenanceTypes": [
+    {
+      "id": "1",
+      "description": "Vérification des filtres",
+      "type": "Préventif"
+    },
+    {
+      "id": "2",
+      "description": "Remplacement des courroies",
+      "type": "Correctif"
+    }
+  ],
+  "machines": [
+    {
+      "id": "1",
+      "name": "Compresseur A1"
+    },
+    {
+      "id": "2",
+      "name": "Convoyeur B2"
+    }
+  ],
+  "responsables": [
+    {
+      "id": "1",
+      "name": "John Doe"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith"
+    }
+  ],
+  "resources": {
+    "rows": [
+      {
+        "id": "r1",
+        "name": "CHAFIQ",
+        "age": 25,
+        "role": "technicien"
+      },
+      {
+        "id": "r2",
+        "name": "Achraf",
+        "age": 25,
+        "role": "Devlopeur"
+      }
+    ]
+  },
+  "events": {
+    "rows": [
+      {
+        "id": "xv9SHInk",
+        "resourceId": "2",
+        "startDate": "2024-05-22T23:00",
+        "endDate": "2024-05-29T23:00",
+        "name": "Vérification des filtres"
+      },
+      {
+        "id": "BDkdWFWk",
+        "resourceId": "2",
+        "startDate": "2024-05-29T23:00",
+        "endDate": "2024-05-29T23:00",
+        "name": "Remplacement des courroies"
+      },
+      {
+        "id": "mdEJCKTO",
+        "resourceId": "2",
+        "startDate": "2024-05-21T23:00",
+        "endDate": "2024-05-29T23:00",
+        "name": "Remplacement des courroies"
+      }
+    ]
+  }
+}
