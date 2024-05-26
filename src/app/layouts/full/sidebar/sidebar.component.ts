@@ -23,9 +23,10 @@ export class AppSidebarComponent implements OnDestroy {
     {state:'maintenance',type:'link',name:'Maintenance',icon:'handyman'},
     {state:'equipement',type:'link',name:'Equipement',icon:'checklist'},
     {state:'responsable',type:'link',name:'Responsable',icon:'people_outline'},
-     /*{ state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
+    /*{ state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
+    { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
     { state: 'tabs', type: 'link', name: 'Tabs', icon: 'tab' },
-    { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
+    ,
     { state: 'snackbar', type: 'link', name: 'Snackbar', icon: 'adb' },
 
    

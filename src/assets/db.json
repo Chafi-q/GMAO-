@@ -9,6 +9,24 @@
       "responsable": "AYMAN TISSIR",
       "type": "Préventif",
       "machine": "Bobine"
+    },
+    {
+      "id": "2",
+      "description": "Remplacement des courroies",
+      "dateDebut": "2024-05-22T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "AYMAN TISSIR",
+      "type": "Correctif",
+      "machine": "Convoyeur B2"
+    },
+    {
+      "id": "3",
+      "description": "Vérification des filtres",
+      "dateDebut": "2024-05-21T23:00:00.000Z",
+      "dateFin": "2024-05-29T23:00:00.000Z",
+      "responsable": "CHAFIQ BEN ERRAGUIG",
+      "type": "Préventif",
+      "machine": "CONSOLE"
     }
   ],
   "maintenanceTypes": [
@@ -25,14 +43,6 @@
   ],
   "machines": [
     {
-      "id": "1",
-      "name": "Compresseur A1"
-    },
-    {
-      "id": "2",
-      "name": "Convoyeur B2"
-    },
-    {
       "id": "3",
       "serialNumber": "M22",
       "name": "Bobine",
@@ -45,6 +55,13 @@
       "name": "BOBINE",
       "machineModel": "2003",
       "puissance": "400W"
+    },
+    {
+      "id": "3",
+      "serialNumber": "A_22",
+      "name": "CONSOLE",
+      "machineModel": "2005",
+      "puissance": "43W"
     }
   ],
   "responsables": [
@@ -93,8 +110,15 @@
         "name": "Vérification des filtres"
       },
       {
-        "id": "1",
+        "id": "2",
         "resourceId": "2",
+        "startDate": "2024-05-22T23:00",
+        "endDate": "2024-05-29T23:00",
+        "name": "Remplacement des courroies"
+      },
+      {
+        "id": "3",
+        "resourceId": "1",
         "startDate": "2024-05-21T23:00",
         "endDate": "2024-05-29T23:00",
         "name": "Vérification des filtres"
