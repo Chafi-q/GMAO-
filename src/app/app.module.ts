@@ -17,6 +17,7 @@ import { DemoMaterialModule } from './demo-material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { TacheModule } from './modules/tache/tache.module';
+import { EquipementModule } from './modules/equipement/equipement.module';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { TacheModule } from './modules/tache/tache.module';
     SharedModule,
     RouterModule.forRoot(AppRoutes),
     AppSidebarComponent,
-    TacheModule
+    TacheModule,
+    EquipementModule
 
     
 

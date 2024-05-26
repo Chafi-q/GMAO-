@@ -6,12 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { TacheService } from './tache.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-
-
-
-
-
-
+import { SchedularComponent } from './component/schedular/schedular.component';
 
 
 
@@ -28,17 +23,15 @@ export class TacheComponent implements AfterViewInit, OnInit {
   responsables: any[] = [];
   TACHES: any[] = [];
   myDataArray = new MatTableDataSource<any>([]);
-  Events:any[]=[];
+  Events: any[] = [];
 
   displayedColumns: string[] = ['id', 'description', 'responsable', 'type', 'machine', 'dateDebut', 'dateFin', 'operation'];
-
-  
-	 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private fb: FormBuilder, private tacheService: TacheService,public snackBar: MatSnackBar,private http: HttpClient) {
+
+  constructor(private fb: FormBuilder, private tacheService: TacheService, public snackBar: MatSnackBar, private http: HttpClient) {
     this.tacheForm = this.fb.group({
       maintenanceType: [''],
       machine: [''],
@@ -63,8 +56,10 @@ export class TacheComponent implements AfterViewInit, OnInit {
 
     this.tacheService.fetcheTache().subscribe(data => {
       this.TACHES = data;
-      this.myDataArray.data = this.TACHES; 
+      this.myDataArray.data = this.TACHES;
     });
+
+    this.loadEvents();
   }
 
   ngAfterViewInit() {
@@ -78,11 +73,12 @@ export class TacheComponent implements AfterViewInit, OnInit {
   }
 
   onSubmit() {
+    const idAdded=(this.myDataArray.data.length + 1).toString();
     if (this.tacheForm.valid) {
       const formValue = this.tacheForm.value;
 
       const newTache = {
-        id: this.myDataArray.data.length + 1,
+        id: idAdded,
         description: formValue.maintenanceType.description,
         dateDebut: formValue.dateDebut,
         dateFin: formValue.dateFin,
@@ -92,64 +88,48 @@ export class TacheComponent implements AfterViewInit, OnInit {
       };
 
       this.tacheService.addTache(newTache).subscribe(response => {
+        this.snackBar.open("tache affectée", "ok", { duration: 2000 });
 
-          this.snackBar.open("tache affectée", "ok", {
-            duration: 2000,
-          });
+        const newEvent = {
+          id: idAdded,
+          resourceId: formValue.responsable.id.toString(),
+          startDate: this.formatToISO(formValue.dateDebut),
+          endDate: this.formatToISO(formValue.dateFin),
+          name: formValue.maintenanceType.description
+        };
 
+        this.Events.push(newEvent);
+        this.updateEventsOnServer(this.Events);
 
-      
-          this.http.get<any>("http://localhost:3000/events").subscribe(
-  (response: any) => {
-    const event = response.rows || []; // Get the rows array from the response or create an empty array if it doesn't exist
-
-
-    // Create the new event
-    const newEvent = {
-      id: this.generateRandomId(8),
-      resourceId: (formValue.responsable.id).toString(),
-      startDate: this.formatToISO(formValue.dateDebut),
-      endDate:  this.formatToISO(formValue.dateFin),
-      name: formValue.maintenanceType.description
-    };
-
-    // Push the new event to the rows array
-    this.Events.push(newEvent);
-    this.Events.concat(event)
-
-    console.log(this.Events);
-
-    // Update the events object
-    const updatedEvents = { rows: this.Events };
-
-    // Update the events object in the server
-    this.http.put("http://localhost:3050/events", updatedEvents).subscribe(
-      () => {
-        console.log("Event added and array updated successfully");
-        console.log(this.Events);
-      },
-      (error) => {
-        console.error("Error updating array:", error);
-
-      }
-    );
-  },
-  (error) => {
-    console.error("Error fetching array:", error);
-  }
-
- 
-);
-
-
-
-
-        
-        this.myDataArray.data = [...this.myDataArray.data, newTache]; 
+        this.myDataArray.data = [...this.myDataArray.data, newTache];
         this.tacheForm.reset();
       });
     }
   }
+
+  loadEvents() {
+    this.http.get<any>("http://localhost:3050/events").subscribe(
+      (response: any) => {
+        this.Events = response.rows || [];
+      },
+      (error) => {
+        console.error("Error fetching events:", error);
+      }
+    );
+  }
+
+  updateEventsOnServer(events: any[]) {
+    const updatedEvents = { rows: events };
+    this.http.put("http://localhost:3050/events", updatedEvents).subscribe(
+      () => {
+        window.location.reload();
+      },
+      (error) => {
+        console.error("Error updating events array:", error);
+      }
+    );
+  }
+
   generateRandomId(length: number = 8) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let randomId = '';
@@ -158,9 +138,27 @@ export class TacheComponent implements AfterViewInit, OnInit {
     }
     return randomId;
   }
+
   formatToISO(dateString: string): string {
     const date = new Date(dateString);
     return date.toISOString().slice(0, 16);
   }
-  
+
+  loadTaches() {
+    this.tacheService.fetcheTache().subscribe(data => {
+      this.TACHES = data;
+      this.myDataArray.data = this.TACHES;
+    });
+  }
+ 
+  deleteTache(id: number) {
+    const confirmDelete = window.confirm('Are you sure you want to delete this item?');
+    if (confirmDelete) {
+      this.tacheService.deleteTache(id).subscribe(() => {
+        this.loadTaches();
+      });
+    }
+  }
+
+
 }

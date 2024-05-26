@@ -42,4 +42,18 @@ export class TacheService {
     return this.http.get<any[]>(this.machinesUrl);
   }
 
+  getTaches(): Observable<any[]> {
+    return this.http.get<any[]>(this.TacheUrl);
+  }
+
+  deleteEvent(id: number): Observable<void> {
+    
+    return this.http.delete<void>(`${this.EventUrl}/${id}`);
+  }
+
+  deleteTache(id: number): Observable<void> {
+    this.deleteEvent(id);
+    return this.http.delete<void>(`${this.TacheUrl}/${id}`);
+  }
+
 }

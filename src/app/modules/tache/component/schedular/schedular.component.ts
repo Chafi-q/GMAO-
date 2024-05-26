@@ -19,20 +19,11 @@ export class SchedularComponent implements AfterViewInit {
 
 
 ngOnInit(): void {
-  /*
-  this. tacheservice.fetcheTache().subscribe(data => {
-    console.log(data);
-    this.resources = data;
-  });
 
-  this.tacheservice.fetchResponsable().subscribe(data => {
-    console.log(data);
-    this.events = data;
 
-    // After fetching both resources and events, update the scheduler
-  
-  });*/
 }
+
+
 
 
   @ViewChild('scheduler') schedulerComponent! : BryntumSchedulerComponent;
@@ -49,16 +40,17 @@ ngOnInit(): void {
     Toast.show(`Editing ${eventRecord.name}`);
   };
 
+ 
+
   changesHandler = ({ source } : { source : CrudManager }) => {
     const { changes } = source;
-
+  
     // In a real app you would send the changes to the server here.
     console.log(changes);
-
+  
     // Then you would call `source.acceptChanges()` to clear local changes
     source.acceptChanges();
-  };
-
+  }
  
 
   crudManagerConfig = {
@@ -87,8 +79,8 @@ ngOnInit(): void {
     headers : [
        // Week 16 ... on the top level
        {
-         unit       : 'week',
-         dateFormat : 'Wp'
+         unit       : 'month',
+         dateFormat : 'MM-YYYY'
        },
        // M, T, W ... on the bottom level
        {
