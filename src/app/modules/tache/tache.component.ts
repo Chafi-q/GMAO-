@@ -6,7 +6,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { TacheService } from './tache.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-import { SchedularComponent } from './component/schedular/schedular.component';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+
 
 
 
@@ -75,7 +76,10 @@ export class TacheComponent implements AfterViewInit, OnInit {
   onSubmit() {
     const idAdded=(this.myDataArray.data.length + 1).toString();
     if (this.tacheForm.valid) {
+      this.sendEmail();
       const formValue = this.tacheForm.value;
+
+     
 
       const newTache = {
         id: idAdded,
@@ -159,6 +163,20 @@ export class TacheComponent implements AfterViewInit, OnInit {
       });
     }
   }
-
+ 
+  async sendEmail() {
+    emailjs.init('4ltg4I8dW42uklyIN')
+      const formValue = this.tacheForm.value;
+    let response= await emailjs.send("service_qj79w8q","template_qqw2txf",{
+      responsable: formValue.responsable.name,
+      to: formValue.responsable.email,
+      description: formValue.maintenanceType.description,
+      type: formValue.maintenanceType.type,
+      dateDebut: formValue.dateDebut,
+      dateFin: formValue.dateFin,
+      machine: formValue.machine.name,
+      });
+      this.snackBar.open("email envoyé", "ok", { duration: 2000 })
+  };
 
 }

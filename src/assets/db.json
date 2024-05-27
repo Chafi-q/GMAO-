@@ -3,12 +3,21 @@
   "taches": [
     {
       "id": "1",
-      "description": "Réparation des pannes et ajustement des machines de pasteurisation",
-      "dateDebut": "2024-05-22T23:00:00.000Z",
-      "dateFin": "2024-05-28T23:00:00.000Z",
-      "responsable": "BOUZIANE MOHAMMED",
-      "type": "Correctif",
-      "machine": "Emballeuse de cartons de lait"
+      "description": "Remplacement des pièces défectueuses et réparation des systèmes de echauffement",
+      "dateDebut": "2024-05-30T23:00:00.000Z",
+      "dateFin": "2024-06-18T23:00:00.000Z",
+      "responsable": "ayman tissir",
+      "type": "correctif",
+      "machine": "Remplisseur de bouteilles 2"
+    },
+    {
+      "id": "2",
+      "description": "impression des documents necéssaires",
+      "dateDebut": "2024-05-26T23:00:00.000Z",
+      "dateFin": "2024-05-30T23:00:00.000Z",
+      "responsable": "FAREH Abdallah",
+      "type": "préventif",
+      "machine": "imprimente"
     }
   ],
   "maintenances": [
@@ -35,6 +44,18 @@
       "title": "Maintenance des systèmes de refroidissement",
       "description": "Remplacement des pièces défectueuses et réparation des systèmes de refroidissement",
       "type": "Correctif"
+    },
+    {
+      "id": "7a18",
+      "title": "Maintenance des systèmes de echauffement",
+      "description": "Remplacement des pièces défectueuses et réparation des systèmes de echauffement",
+      "type": "correctif"
+    },
+    {
+      "id": "4e06",
+      "title": "impression",
+      "description": "impression des documents necéssaires",
+      "type": "préventif"
     }
   ],
   "machines": [
@@ -65,94 +86,56 @@
       "name": "Nettoyeur CIP",
       "machineModel": "Modèle E345",
       "location": "Bloc de nettoyage"
+    },
+    {
+      "id": "5",
+      "serialNumber": "3",
+      "name": "Remplisseur de bouteilles 2",
+      "machineModel": "b456",
+      "puissance": "100W"
+    },
+    {
+      "id": "6",
+      "serialNumber": "12345",
+      "name": "imprimente",
+      "machineModel": "d345",
+      "puissance": "500W"
     }
   ],
   "responsables": [
     {
       "id": "1",
-      "name": "BENERRAGUIG CHAFIQ",
-      "email": "chafiq.benerraguig@gmail.com",
-      "phoneNumber": "0624323011",
-      "role": "TECHNICIEN",
-      "departement": "A2"
-    },
-    {
-      "id": "2",
-      "name": "EL ALAOUI AHMED",
-      "email": "ahmed.elalaoui@gmail.com",
-      "phoneNumber": "0612345678",
-      "role": "INGÉNIEUR",
-      "departement": "B1"
-    },
-    {
-      "id": "3",
-      "name": "NACIRI FATIMA",
-      "email": "fatima.naciri@gmail.com",
-      "phoneNumber": "0698765432",
-      "role": "SUPERVISEUR",
-      "departement": "C3"
-    },
-    {
-      "id": "4",
-      "name": "BOUZIANE MOHAMMED",
-      "email": "mohammed.bouziane@gmail.com",
-      "phoneNumber": "068765432123",
-      "role": "CHEF DE PROJET",
-      "departement": "D4"
-    },
-    {
-      "id": "5",
-      "name": "EL KHAYATI RACHID",
-      "email": "rachid.elkhayati@gmail.com",
-      "phoneNumber": "067654321000",
-      "role": "TECHNICIEN",
-      "departement": "E2"
+      "name": "FAREH Abdallah",
+      "email": "abdofareh3@gmail.com",
+      "phoneNumber": "0712345678",
+      "role": "ingenieur",
+      "departement": "MI"
     }
   ],
   "resources": {
     "rows": [
       {
         "id": "1",
-        "name": "BENERRAGUIG CHAFIQ",
-        "role": "TECHNICIEN"
-      },
-      {
-        "id": "2",
-        "name": "EL ALAOUI AHMED",
-        "role": "INGÉNIEUR"
-      },
-      {
-        "id": "3",
-        "name": "NACIRI FATIMA",
-        "role": "SUPERVISEUR"
-      },
-      {
-        "id": "4",
-        "name": "BOUZIANE MOHAMMED",
-        "role": "CHEF DE PROJET"
-      },
-      {
-        "id": "5",
-        "name": "EL KHAYATI RACHID",
-        "role": "TECHNICIEN"
+        "name": "FAREH Abdallah",
+        "role": "ingenieur"
       }
     ]
   },
   "events": {
     "rows": [
       {
-        "id": "4",
+        "id": "1",
         "resourceId": "2",
-        "startDate": "2024-04-24T23:00",
-        "endDate": "2024-04-25T23:00",
-        "name": "Réparation des pannes et ajustement des machines de pasteurisation"
+        "startDate": "2024-05-30T23:00",
+        "endDate": "2024-06-18T23:00",
+        "name": "Remplacement des pièces défectueuses et réparation des systèmes de echauffement"
       },
       {
-        "id": "1",
-        "resourceId": "4",
-        "startDate": "2024-05-22T23:00",
-        "endDate": "2024-05-28T23:00",
-        "name": "Réparation des pannes et ajustement des machines de pasteurisation"
+        "id": "2",
+        "resourceId": "1",
+        "startDate": "2024-05-26T23:00",
+        "endDate": "2024-05-30T23:00",
+        "name": "impression des documents necéssaires"
       }
     ]
   }
