@@ -3,125 +3,156 @@
   "taches": [
     {
       "id": "1",
-      "description": "Vérification des filtres",
-      "dateDebut": "2024-05-21T23:00:00.000Z",
-      "dateFin": "2024-05-29T23:00:00.000Z",
-      "responsable": "AYMAN TISSIR",
-      "type": "Préventif",
-      "machine": "Bobine"
-    },
-    {
-      "id": "2",
-      "description": "Remplacement des courroies",
+      "description": "Réparation des pannes et ajustement des machines de pasteurisation",
       "dateDebut": "2024-05-22T23:00:00.000Z",
-      "dateFin": "2024-05-29T23:00:00.000Z",
-      "responsable": "AYMAN TISSIR",
+      "dateFin": "2024-05-28T23:00:00.000Z",
+      "responsable": "BOUZIANE MOHAMMED",
       "type": "Correctif",
-      "machine": "Convoyeur B2"
-    },
-    {
-      "id": "3",
-      "description": "Vérification des filtres",
-      "dateDebut": "2024-05-21T23:00:00.000Z",
-      "dateFin": "2024-05-29T23:00:00.000Z",
-      "responsable": "CHAFIQ BEN ERRAGUIG",
-      "type": "Préventif",
-      "machine": "CONSOLE"
+      "machine": "Emballeuse de cartons de lait"
     }
   ],
-  "maintenanceTypes": [
+  "maintenances": [
     {
       "id": "1",
-      "description": "Vérification des filtres",
+      "title": "Maintenance des cuves de stockage",
+      "description": "Nettoyage et désinfection des cuves de stockage de lait",
       "type": "Préventif"
     },
     {
       "id": "2",
-      "description": "Remplacement des courroies",
+      "title": "Maintenance des machines de pasteurisation",
+      "description": "Réparation des pannes et ajustement des machines de pasteurisation",
+      "type": "Correctif"
+    },
+    {
+      "id": "3",
+      "title": "Maintenance des lignes de conditionnement",
+      "description": "Vérification et lubrification des équipements des lignes de conditionnement",
+      "type": "Préventif"
+    },
+    {
+      "id": "4",
+      "title": "Maintenance des systèmes de refroidissement",
+      "description": "Remplacement des pièces défectueuses et réparation des systèmes de refroidissement",
       "type": "Correctif"
     }
   ],
   "machines": [
     {
+      "id": "2",
+      "serialNumber": "SN789012",
+      "name": "Remplisseur de bouteilles",
+      "machineModel": "Modèle B456",
+      "location": "Ligne de conditionnement"
+    },
+    {
       "id": "3",
-      "serialNumber": "M22",
-      "name": "Bobine",
-      "machineModel": "A-23",
-      "puissance": "45W"
+      "serialNumber": "SN345678",
+      "name": "Pasteurisateur de lait",
+      "machineModel": "Modèle C789",
+      "location": "Bloc Pasteurisation"
     },
     {
       "id": "4",
-      "serialNumber": "M-23",
-      "name": "BOBINE",
-      "machineModel": "2003",
-      "puissance": "400W"
+      "serialNumber": "SN901234",
+      "name": "Emballeuse de cartons de lait",
+      "machineModel": "Modèle D012",
+      "location": "Ligne d'emballage"
     },
     {
-      "id": "3",
-      "serialNumber": "A_22",
-      "name": "CONSOLE",
-      "machineModel": "2005",
-      "puissance": "43W"
+      "id": "5",
+      "serialNumber": "SN567890",
+      "name": "Nettoyeur CIP",
+      "machineModel": "Modèle E345",
+      "location": "Bloc de nettoyage"
     }
   ],
   "responsables": [
     {
       "id": "1",
-      "name": "CHAFIQ BEN ERRAGUIG"
+      "name": "BENERRAGUIG CHAFIQ",
+      "email": "chafiq.benerraguig@gmail.com",
+      "phoneNumber": "0624323011",
+      "role": "TECHNICIEN",
+      "departement": "A2"
     },
     {
       "id": "2",
-      "name": "AYMAN TISSIR"
+      "name": "EL ALAOUI AHMED",
+      "email": "ahmed.elalaoui@gmail.com",
+      "phoneNumber": "0612345678",
+      "role": "INGÉNIEUR",
+      "departement": "B1"
     },
     {
       "id": "3",
-      "name": "FAREH ABDELLAH"
+      "name": "NACIRI FATIMA",
+      "email": "fatima.naciri@gmail.com",
+      "phoneNumber": "0698765432",
+      "role": "SUPERVISEUR",
+      "departement": "C3"
+    },
+    {
+      "id": "4",
+      "name": "BOUZIANE MOHAMMED",
+      "email": "mohammed.bouziane@gmail.com",
+      "phoneNumber": "068765432123",
+      "role": "CHEF DE PROJET",
+      "departement": "D4"
+    },
+    {
+      "id": "5",
+      "name": "EL KHAYATI RACHID",
+      "email": "rachid.elkhayati@gmail.com",
+      "phoneNumber": "067654321000",
+      "role": "TECHNICIEN",
+      "departement": "E2"
     }
   ],
   "resources": {
     "rows": [
       {
         "id": "1",
-        "name": "CHAFIQ BEN ERRAGUIG",
-        "age": 25,
-        "role": "DEVLOPPEUR"
+        "name": "BENERRAGUIG CHAFIQ",
+        "role": "TECHNICIEN"
       },
       {
         "id": "2",
-        "name": "AYMAN TISSIR",
-        "age": 25,
-        "role": "DEVELOPPEUR"
+        "name": "EL ALAOUI AHMED",
+        "role": "INGÉNIEUR"
       },
       {
         "id": "3",
-        "name": "FAREH ABDELLAH",
-        "age": 25,
-        "role": "DEVELOPPEUR"
+        "name": "NACIRI FATIMA",
+        "role": "SUPERVISEUR"
+      },
+      {
+        "id": "4",
+        "name": "BOUZIANE MOHAMMED",
+        "role": "CHEF DE PROJET"
+      },
+      {
+        "id": "5",
+        "name": "EL KHAYATI RACHID",
+        "role": "TECHNICIEN"
       }
     ]
   },
   "events": {
     "rows": [
       {
+        "id": "4",
+        "resourceId": "2",
+        "startDate": "2024-04-24T23:00",
+        "endDate": "2024-04-25T23:00",
+        "name": "Réparation des pannes et ajustement des machines de pasteurisation"
+      },
+      {
         "id": "1",
-        "resourceId": "2",
-        "startDate": "2024-05-29T23:00",
-        "endDate": "2024-05-30T23:00",
-        "name": "Vérification des filtres"
-      },
-      {
-        "id": "2",
-        "resourceId": "2",
+        "resourceId": "4",
         "startDate": "2024-05-22T23:00",
-        "endDate": "2024-05-29T23:00",
-        "name": "Remplacement des courroies"
-      },
-      {
-        "id": "3",
-        "resourceId": "1",
-        "startDate": "2024-05-21T23:00",
-        "endDate": "2024-05-29T23:00",
-        "name": "Vérification des filtres"
+        "endDate": "2024-05-28T23:00",
+        "name": "Réparation des pannes et ajustement des machines de pasteurisation"
       }
     ]
   }

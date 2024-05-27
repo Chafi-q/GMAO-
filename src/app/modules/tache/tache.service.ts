@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TacheService {
   private TacheUrl = 'http://localhost:3050/taches';
-  private maintenanceTypesUrl = 'http://localhost:3050/maintenanceTypes';
+  private maintenanceTypesUrl = 'http://localhost:3050/maintenances';
   private machinesUrl = 'http://localhost:3050/machines';
   private responsablesUrl = 'http://localhost:3050/responsables';
   private EventUrl='http://localhost:3050/events/';

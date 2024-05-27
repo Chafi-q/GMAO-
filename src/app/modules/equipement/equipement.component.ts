@@ -13,7 +13,7 @@ export class EquipementComponent implements OnInit {
   MachineForm!: FormGroup;
   myDataArray = new MatTableDataSource<any>([]);
 
-  displayedColumns: string[] = ['serialnum', 'name', 'machineModel', 'location', 'power','operation'];
+  displayedColumns: string[] = ['serialnum', 'name', 'machineModel', 'location','operation'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(
     private fb: FormBuilder,

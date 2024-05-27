@@ -14,6 +14,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { EquipementRoutingModule } from './equipement-routing.module';
 import { EquipementComponent } from './equipement.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 @NgModule({

@@ -1,1 +1,78 @@
-<p>maintenance works!</p>
+<div class="row">
+    <div class="col-lg-10 col-sm-12">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>AJOUTER UNE MAINTENANCE</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+          <div class="form-container">
+            <form [formGroup]="maintenanceForm" (ngSubmit)="onSubmit()">
+              <!-- Row 1: Title -->
+              <mat-form-field appearance="fill">
+                <mat-label>Titre</mat-label>
+                <input matInput formControlName="title" required>
+              </mat-form-field>
+  
+              <!-- Row 2: Description -->
+              <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description" required></textarea>
+              </mat-form-field>
+  
+              <!-- Row 3: Type (Préventif, Correctif) -->
+              <mat-radio-group formControlName="type">
+                <mat-radio-button value="préventif">Préventif</mat-radio-button>
+                <mat-radio-button value="correctif">Correctif</mat-radio-button>
+              </mat-radio-group>
+             <div>
+                <br>
+                              <button mat-raised-button color="primary" type="submit">Ajouter Maintenance</button>
+
+             </div>
+            </form>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <div class="col-lg-12 col-sm-12">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>LISTE DES MAINTENANCES</mat-card-title>
+          <mat-card-subtitle>Maintenances en cours</mat-card-subtitle>
+          <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+          </mat-form-field>
+          <table mat-table [dataSource]="maintenanceDataArray" class="mat-elevation-z0">
+            <!-- ID Column -->
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef> Titre </th>
+              <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef> Description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="type">
+              <th mat-header-cell *matHeaderCellDef> Type </th>
+              <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="operation">
+              <th mat-header-cell *matHeaderCellDef> OPERATION </th>
+              <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="Warn" (click)="deleteMaintenance(element.id)">supprimer</button>
+              </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"></mat-paginator>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

@@ -18,12 +18,14 @@ export class AppSidebarComponent implements OnDestroy {
   private _mobileQueryListener: () => void;
  
   public menuItems=[
-    { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
     {state:'tache',type:'link',name:'Taches',icon:'gpp_good'},
     {state:'maintenance',type:'link',name:'Maintenance',icon:'handyman'},
-    {state:'equipement',type:'link',name:'Equipement',icon:'checklist'},
-    {state:'responsable',type:'link',name:'Responsable',icon:'people_outline'},
-    /*{ state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
+    {state:'equipement',type:'link',name:'Equipement',icon:'dns icon'},
+    {state:'responsable',type:'link',name:'Personnel',icon:'people_outline'},
+   
+    /*
+    { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
+    { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
     { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
     { state: 'tabs', type: 'link', name: 'Tabs', icon: 'tab' },
     ,
